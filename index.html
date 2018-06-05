@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" type="image/png" href="#">
+    <script type="text/javascript">
+        $(document).ready(function () {
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+
+        var target = this.hash;
+        var $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 900, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
+});
+
+    </script>
+    <title></title>
+    
+    <!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+    <script>
+        ! function(e) {
+            "use strict";
+
+            function t(e, t, n) {
+                e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+            }
+
+            function n(t, n) {
+                return e.localStorage && localStorage[t + "_content"] && localStorage[t + "_file"] === n
+            }
+
+            function a(t, a) {
+                if (e.localStorage && e.XMLHttpRequest) n(t, a) ? o(localStorage[t + "_content"]) : l(t, a);
+                else {
+                    var s = r.createElement("link");
+                    s.href = a, s.id = t, s.rel = "stylesheet", s.type = "text/css", r.getElementsByTagName("head")[0].appendChild(s), r.cookie = t
+                }
+            }
+
+            function l(e, t) {
+                var n = new XMLHttpRequest;
+                n.open("GET", t, !0), n.onreadystatechange = function() {
+                    4 === n.readyState && 200 === n.status && (o(n.responseText), localStorage[e + "_content"] = n.responseText, localStorage[e + "_file"] = t)
+                }, n.send()
+            }
+
+            function o(e) {
+                var t = r.createElement("style");
+                t.setAttribute("type", "text/css"), r.getElementsByTagName("head")[0].appendChild(t), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e
+            }
+            var r = e.document;
+            e.loadCSS = function(e, t, n) {
+                var a, l = r.createElement("link");
+                if (t) a = t;
+                else {
+                    var o;
+                    o = r.querySelectorAll ? r.querySelectorAll("style,link[rel=stylesheet],script") : (r.body || r.getElementsByTagName("head")[0]).childNodes, a = o[o.length - 1]
+                }
+                var s = r.styleSheets;
+                l.rel = "stylesheet", l.href = e, l.media = "only x", a.parentNode.insertBefore(l, t ? a : a.nextSibling);
+                var c = function(e) {
+                    for (var t = l.href, n = s.length; n--;)
+                        if (s[n].href === t) return e();
+                    setTimeout(function() {
+                        c(e)
+                    })
+                };
+                return l.onloadcssdefined = c, c(function() {
+                    l.media = n || "all"
+                }), l
+            }, e.loadLocalStorageCSS = function(l, o) {
+                n(l, o) || r.cookie.indexOf(l) > -1 ? a(l, o) : t(e, "load", function() {
+                    a(l, o)
+                })
+            }
+        }(this);
+    </script>
+
+    <!-- Load CSS Start -->
+    <script>
+        loadCSS("css/style.css?ver=1.0.0", false, "all");
+    </script>
+    <script>
+        loadCSS("css/font-awesome.min.css?ver=1.0.0", false, "all");
+    </script>
+    <script>
+        loadCSS("css/slick.min.css?ver=1.0.0", false, "all");
+    </script>
+    <script>
+        loadCSS("css/magnific-popup.1.0.0.min.css?ver=1.0.0", false, "all");
+    </script>
+    <script>
+        loadCSS("css/jquery.fancybox.min.css?ver=1.0.0", false, "all");
+    </script>
+    <!-- Load CSS End -->
+
+    <!-- Load CSS Compiled without JS -->
+    <noscript>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.1.0.0.min.css">
+        <link rel="stylesheet" href="css/slick.min.css">
+        <link rel="stylesheet" href="css/jquery.fancybox.min.min.css">
+    </noscript>
+
+</head>
+
+<body>
+
+    <!-- End Google Tag Manager (noscript) -->
+    <nav>
+        <div class="hide_menu" id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="main_hide_content control_zn">
+                <!--<p class="logo"><img src="#" alt="" /></p>-->
+
+                <ul class="phone_list">
+                    <li><a href="tel:+000000000">+38 (00)0000000</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <!--<p class="logo"><img src="#" alt="" /></p>-->
+    </header>
+    <main class="wrapper">
+        <div class="bar-long"></div>
+        <a href="#main_screen" class="arrow_up tc mobile_ul"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+        <section id="main_screen" class="start-content">
+            <div id="first_screen">
+                <div class="view-block container">
+                    <div class="txt_box">
+                        <h1>ЭКСПРЕСС-НАСТРОЙКА ОТДЕЛА ПРОДАЖ</h1>
+                        <p>Как быстро вывести продажи на новый уровень в короткий срок, через настройку и усиление отдела продаж?</p>
+                        <p>Трехмесячный онлайн-курс с Николаем ГУРТОВЕНКО</p>
+                        <a href="#exam5" title="Консультация" onclick="set(this);" class="form-receive feedback open-popup-link tc"><span id="cta_1" class="inside_btn">Узнать больше!</span></a>
+                    </div>
+                </div>
+                <div class="scroll_social clearfix">
+                    <!--<div class="scroll_down t-up"><a href="#exam5" class="mobile_ul">Вниз</a></div>-->
+                    <ul class="social_list">
+                        <li><a href="https://www.facebook.com/" target="blank_"><i class="fa fa-facebook soc_ico" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.youtube.com/" target="blank_"><i class="fa fa-youtube-play soc_ico" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.vk.com/" target="blank_"><i class="fa fa-vk soc_ico" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="exam5" class="task-content">
+            <div class="tsk-block container">
+                <h2>Вы как собственник бизнеса пытаетесь давно уже настроить свои продажи и иногда вам это даже удавалось…</h2>
+                <div class="clearfix first_clr">
+                    <div class="cell_img_1 img_size"><img src="./images/img-1.png" alt="" />
+                        <figcaption>Я же умею, остальным расскажу и покажу.(Обычный предприниматель)</figcaption>
+                    </div>
+                    <div class="cell_text_1">
+                        <h3>… но Вас беспокоят вопросы каждый день:</h3>
+                        <ul>
+                            <li><span>Почему менеджеры по продажам уходят?</span></li>
+                            <li><span>Почему скрипты не продают?</span></li>
+                            <li><span>Почему клиенты не покупают?</span></li>
+                            <li><span>Что делают сейчас мои менеджеры по продажам?</span></li>
+                            <li><span>Какая ситуация будет к концу месяца, план выполнят?</span></li>
+                            <li><span>Какие изменения в отделе продаж помогут сделать рывок?</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="coach-content">
+                <div id="exam3" class="lesson-block clearfix">
+
+                </div>
+            </div>
+        </section>
+        <section class="task-2-content">
+            <div class="tsk-2-block clearfix">
+
+                <div class="tsk_clear_1 clearfix">
+                    <div class="tsk_content">
+                        <div class="txt_box_5">
+                            <h2>Как же быстро вывести продажи на новый уровень в короткий срок, через настройку и усиление отдела продаж?</h2>
+
+                        </div>
+                        <div class="side_cell">
+                            <div class="img_box_2 img_size"><img src="images/sprinter.jpg" alt="" /></div>
+                            <p class="stand_tsk">Продавать больше, дороже, уверенно и стабильно!</p>
+                            <p class="stand_tsk2">Отдел продаж — это машина по генерации прибыли, когда он работает как слаженный механизм!</p>
+                            <p class="stnd_p">Коучинг для собственников и руководителей отделов продаж, бизнес которых зависит от продаж. Если у вас все хорошо, вы растете в 2, 3, … 10 раз в год и при этом не завалены рутиной — коучинг не для вас! Кроме ответов на эти вопросы, я даю инструменты управления, постановки задач и контроля над вашим отделом продаж и компанией в целом. Я убежден: косметические изменения не приводят к повышению эффективности. Только задействовав все ресурсы компании можно выйти на новый уровень. Чтобы продавать стабильно и много, нужен системный подход!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="programm-content">
+            <div id="exam2" class="prg-block content">
+                <h2>НАСТРОЙКА СИСТЕМЫ ПРОДАЖ:</h2>
+                <div class="cell_img_1 img_size"><img src="./images/f1x430.jpg" alt="" /></div>
+                <div class="bloket">
+                    <!-- V.Podgornov TODO 
+replace content https://docs.google.com/document/d/1J5qBowxq3khqQTw7AKQKmyf6bJibMcoUhPUdGzS3TEQ/edit -->
+                    <div class="bloket_1">
+                        <h3>Команда</h3>
+                        <p>Структура отдела продаж для разных бизнесов</p>
+                        <p>Руководитель отдела продаж — человек, которого не стоит недооценивать:</p>
+                        <ul>
+                            <li><span>Знает что и как делать </span></li>
+                            <li><span>Подбирает команду </span></li>
+                            <li><span>Отвечает за результат </span></li>
+                        </ul>
+                        <p></p>
+                        <p>Поиск и/или обучение руководителя отдела продаж</p>
+                        <p>Управление продажами через руководителя отдела</p>
+                        <p>Алгоритмы работы для каждого сотрудника отдела продаж!</p>
+                    </div>
+
+                    <div class="bloket_1">
+                        <h3>Бизнес-процессы</h3>
+                        <p>Система контроля</p>
+                        <p>Какая нужна и как внедрять?</p>
+                        <p>Учет и аналитика</p>
+                        <p>Выбор ключевых показателей непотопляемости бизнеса</p>
+                        <p>Как контролировать достижение результата, когда время не ждет?</p>
+                        <p>Что, если где-то идем с опережением, а где-то с опозданием?</p>
+                        <p>Почему баланс показателей бизнеса лучше, чем сверхрезультат?</p>
+                        <p>Как исправлять ошибки контроля?</p>
+
+                    </div>
+
+                    <div class="bloket_1">
+                        <h3>Коммуникации и ускорители</h3>
+                        <p>Автоматизация работы:</p>
+                        <ul>
+                            <li> <span>Как настроить телефонию? </span></li>
+                            <li> <span>Что такое CRM без ада? Как выбрать систему и не получить упорядоченный хаос? </span></li>
+                        </ul>
+                        <p></p>
+                        <p>Учим, зачем и как выбрать, и оплатить лицензии, номер, интернет- сервисы и пр.</p>
+                        <p><b>Даем обучающие документы:</b> скрипты для менеджеров по продажам (диалоги для работы с клиентами), инструкции, презентации и пр.</p>
+                        <p>Продающий контент для бизнеса участников</p>
+                        <p>Система коммуникаций с клиентами онлайн и офлайн: где, как, о чем?</p>
+                        <p>Не умеете писать сами? Научим или скажем, где искать отличный копирайт!</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <section class="task-2-content">
+            <div class="tsk-2-block clearfix">
+
+                <div class="tsk_clear_1 clearfix">
+                    <div class="tsk_content">
+                        <div class="txt_box_6">
+                            <h2>Самое слабое звено</h2>
+                            <p class="stnd_p">Продажи — сердце любого бизнеса. Но, по статистике, 3 из 4 руководителей отделов продаж недовольны работой подчиненных. Мы разбираемся в чем дело — проходим путь от подбора продавцов, их мотивации, до управления работой отделов продаж и перезагрузки этой функции в компании. Находим и устраняем слабые места в продажах!</p>
+                            <h4>Сome to me baby! (Идем со мной, детка!)</h4>
+                            <p class="stnd_p2">Защитить бизнес от утечки информации, текучки продавцов и переманивания ими клиентов за собой сложно, но можно. Вы узнаете как!</p>
+                        </div>
+                        <div class="side_cell">
+                            <div class="img_box_2 img_size"><img src="./images/power.jpg" alt="" /></div>
+                        </div>
+                        <div class="side-news">
+                            <div class="side-news-content">
+                                <div class="side-news-block">
+                                    <h4>Звёздная болезнь появляется тогда, когда начинаешь вбивать свое имя в Google</h4>
+                                    <p>Менеджеры по продажам-звезды в среднем продают в -10 раз больше остальных. Набирать в команду нужно только таких! Как работать со звездами, которые знают себе цену? Удерживать, мотивировать, требовать и получать результат? Это тоже здесь!</p>
+                                </div>
+                                <div class="side-news-block">
+                                    <h4>Настоящее счастье плохо влияет на продажи</h4>
+                                    <p>В продажах есть один соблазн – сделать несколько космических рывков, а после наслаждаться результатом (жить на проценты), особо не напрягаясь. Что менеджеру по продажам хорошо, то для бизнеса – бег на месте. Учим, как сделать продажи допингом и удовольствием.</p>
+                                </div>
+                                <div class="side-news-block">
+                                    <h4>Не мыслям надо учить, а мыслить</h4>
+                                    <p>Продажи — стрессовая работа. Отказы, возражения, отложенный результат, постоянный поиск. Иногда даже самый крутой продажник может дрогнуть. Поэтому в менеджеров по продажам надо вкладывать. Обучать, делать сильнее и искуснее. Нельзя игнорировать развитие отдела продаж! Чему обучать, как, у кого, за сколько денег, как часто… Об этом говорим на курсе подробно!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="coach-content">
+            <div id="exam3" class="lesson-block clearfix">
+                <h2>ДЛЯ КОГО ЭТОТ КОУЧИНГ</h2>
+                <h4>Я работаю только с владельцами или собственниками бизнеса и руководителями их отделов продаж.</h4>
+                <h2>ФОРМАТ РАБОТЫ</h2>
+                <h4>3-4 недели интенсивной работы (около 10 личных встреч) и глубокая проработка всех блоков.</h4>
+            </div>
+        </div>
+        <section class="process-content">
+            <div class="stage-block container">
+                <div class="stg-content">
+                    <div class="stg_clear_1 clearfix">
+
+                        <div class="img_box_11 img_size"><img src="images/gurtovenko.jpg" alt="" /></div>
+                        <div class="side_cell_5">
+                            <h2>Коуч</h2>
+                            <div class="moment_stage">
+                                <p class="note_p light_rec t-up">Николай ГУРТОВЕНКО — эксперт в области построения и запуска отделов продаж, увеличению прибыли компаний и запуска стартапов. Бизнес-тренер, коуч, топ-менеджер и основатель SMART Marketing School. Опыт индивидуальных консультаций собственникам по их бизнесам и разработка полезного материала по продажам и управлению компанией — 5 лет.</p>
+                                <br>
+                                <p class="note_p light_rec t-up">Практический опыт в управлении компаниями и продажах более 15 лет. Из которых более 10 лет — в создании и увеличении эффективности отделов продаж, производств и инвестиций. Прошел путь от простого продажника до руководителя отделов продаж крупнейших отраслевых компаний, топ-менеджера и совладельца нескольких бизнесов.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stg_clear_1 clearfix">
+                        <div class="info-panel">
+                            <div class="info-block">
+                                <img src="images/icon1.png">
+                                <h4>Профессиональные компетенции:</h4>
+                                <ul>
+                                    <li><span>Выстраивание системы продаж</span></li>
+                                    <li><span>Увеличение продаж компаний, завоевание лидерских позиций на рынке</span></li>
+                                    <li><span>Построение и развитие стартапа с нуля, продажа бизнесов</span></li>
+                                    <li><span>Привлечение инвестиций в бизнес</span></li>
+                                    <li><span>Выведение бренда (продукта) на рынок</span></li>
+                                    <li><span>Постановка систем контроля и отчетности</span></li>
+                                </ul>
+                            </div>
+                            <div class="info-block">
+                                <img src="images/icon2.png">
+                                <h4>Экспертиза в продажах:</h4>
+                                <ul>
+                                    <li><span>Управление продажами компании – создание эффективной системы продаж</span></li>
+                                    <li><span>Построение отделов продаж с нуля Развитие направлений холодных продаж</span></li>
+                                    <li><span>Внедрение upsell и cross sale инструментов для продуктового ряда</span></li>
+                                    <li><span>Внедрение CRM-систем в работу компаний</span></li>
+                                    <li><span>Создание KPI`s для продавцов и отделов, приносящих прибыль</span></li>
+                                </ul>
+                            </div>
+                            <div class="info-block">
+                                <img src="images/icon3.png">
+                                <h4>Финансовые и бизнес-результаты:</h4>
+                                <p id="text-block">За 15 лет Николай Гуртовенко помог создать 60 стартапов, построил более 1000 отделов продаж. Вывел компанию по производству и продаже питьевой воды в лидеры рынка Украины. Привлек более 5 млн $ инвестиций в бизнес своих клиентов!</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <div class="coach-content video-content">
+            <h2>Отзывы</h2>
+            <div id="exam4" class="video-block clearfix">
+                <iframe width="400" height="315" src="https://www.youtube.com/embed/5qGBcatu1OI" frameborder="0" allowfullscreen></iframe>
+                <iframe width="400" height="315" src="https://www.youtube.com/embed/aAo_Jze1V8Q" frameborder="0" allowfullscreen></iframe>
+                <iframe width="400" height="315" src="https://www.youtube.com/embed/lJN_i8KMeHs" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <button class="form-receive form_btn" name="send" type="submit"><span class="inside_btn">Предварительная запись на курс</span></button>
+            <div class="feedback-form clearfix">
+                <form id="user-one-2" class="ordering_box enter-mail ordering-cell user-form" method="POST" action="javascript:void(null);">
+                    <!-- Hidden DB Fields -->
+                    <input type="hidden" name="registrationType" value="default_registration">
+                    <input type="hidden" name="orderType" value="">
+                    <input type="hidden" name="form_type" value="">
+                    <input type="hidden" name="page_url" value="">
+                    <input type="hidden" name="user_agent" value="">
+                    <input type="hidden" name="utm_source" value="">
+                    <input type="hidden" name="utm_campaign" value="">
+                    <input type="hidden" name="utm_medium" value="">
+                    <input type="hidden" name="utm_term" value="">
+                    <input type="hidden" name="utm_content" value="">
+                    <input type="hidden" name="ref" value="">
+                    <input type="hidden" name="ip_address" value="">
+                    <input type="hidden" name="city" value="">
+                    <input type="hidden" name="client_id" value="">
+                    <input type="hidden" name="utmcsr" value="">
+                    <input type="hidden" name="utmccn" value="">
+                    <input type="hidden" name="utmcmd" value="">
+                    <input type="hidden" name="click_id" value="">
+                    <input type="hidden" name="affiliate_id" value="">
+                    <input type="hidden" name="product_id" value="">
+                    <input type="hidden" name="product_name" value="">
+                    <!-- END Hidden DB Fields -->
+                    <input type="hidden" name="project_name" value="">
+                    <input type="hidden" name="admin_email" value="">
+                    <input type="hidden" name="form_subject" value="Форма">
+                    <input type="hidden" name="lead_source" value="">
+                    <div class="fl_zone_2">
+                        <p>
+                            <span class="field">
+                               <label for="name_1">Имя</label>
+                               <input type="text" id="name_1" name="name" onfocus="this.placeholder=''" onblur="this.placeholder='Как Вас зовут?'" class="booking head-field" placeholder="Как Вас зовут?" required="" />
+                               <span class="form-application__field-label-line"></span>
+                            </span><i class="ico-user ico-back"></i><br>
+                        </p>
+                        <p>
+                            <span class="field">
+                               <label for="cd-phone-10">Телефон</label>
+                               <input type="tel" id="cd-phone-10" name="phone" onfocus="this.placeholder=''"  onblur="this.placeholder='Ваш номер телефона'" class="head-field" placeholder="Ваш номер телефона" title="+38(099) 99-999-99" pattern="^()[0-9]+$" required="" />
+                               <span class="form-application__field-label-line"></span>
+                            </span><i class="ico-phone ico-back"></i><br>
+                        </p>
+                        <p>
+                            <span class="field">
+                               <label for="mail_1">E-mail</label>
+                               <input id="mail_1" type="email" name="email" onfocus="this.placeholder=''" onblur="this.placeholder='Электронный ящик'" class="booking head-field" placeholder="Электронный ящик" title="email@domain.com" pattern="^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$" required="" />
+                               <span class="form-application__field-label-line"></span>
+                            </span><i class="ico-back ico-mail"></i><br>
+                        </p>
+                        <p>
+                            <span class="field message-field">
+                               <label for="message">Сообщение</label>
+                               <textarea id="message" type="message" name="message" onfocus="this.placeholder=''" onblur="this.placeholder='Ваше сообщение'" class="booking head-field" placeholder="Ваше сообщение" title="TextHere" pattern="^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$" required=""></textarea>
+                               <span class="form-application__field-label-line"></span>
+                            </span><i class="ico-back ico-mail"></i><br>
+                        </p>
+                    </div>
+                    <input type="hidden" class="pacet" name="тип формы" value="">
+                    <input type="hidden" name="start_day" value="0" />
+                    <input type="hidden" name="campaign_token" value="" />
+                    <button class="form-receive form_btn" name="send" type="submit"><span class="inside_btn">Отправить</span></button>
+                </form>
+            </div>
+        </div>
+        <div class="contact-content">
+            <div class="connect-block clearfix">
+                <div class="unity_zone clearfix">
+                    <div class="location_group">
+                        <ul class="navigation nav_down">
+                            <li><a href="#exam2" class="mobile_ul">Главная</a></li>
+                            <li><a href="#exam3" class="mobile_ul">Условия оплаты</a></li>
+                            <li><a href="#exam4" class="mobile_ul">Оферта</a></li>
+                        </ul>
+                        <div class="contact_info">
+                            <div class="second_info">
+                                <ul class="phone_list">
+                                    <li><i class="fa fa-phone" aria-hidden="true"></i><a> +37 254 840 637</a>
+                                    </li>
+                                    <li><i class="fa fa-phone" aria-hidden="true"></i><a> +38 073 228 78 53</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="second_info">
+                                <ul class="phone_list mail_list">
+                                    <li><i class="fa fa-skype" aria-hidden="true"></i><a> live:smartmarketingschool</a>
+                                    </li>
+                                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a> smartmarketingschool@gmail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="line_2 ln_cell"></span>
+                <span class="line_3 ln_cell"></span>
+                <span class="line_4 ln_cell"></span>
+
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="down-part container clearfix">
+            <ul class="nav-footer">
+                <p>©SmartMarketingSchool. Все права защищены. Любое копирование материалов разрешено только с согласия правообладателей.</p>
+                <p>ФОП Гуртовенко О.С. ИНН 2627314266</p>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><img src="images/soc-ico6.png"></a>
+                <a href="#"><img src="images/soc-ico1.png"></a>
+                <a href="#"><img src="images/soc-ico4.png"></a>
+            </div>
+        </div>
+    </footer>
+    <!--ALL MODALS ADDED HERE-->
+
+    <!--ALL MODALS ADDED HERE-->
+    <script type="text/javascript">
+        var wrapg = document.querySelector('.wrapg');
+        var img = document.querySelector('.glitchme');
+        var count = Number(img.dataset.glitchCount);
+
+        img.addEventListener('load', function() {
+            for (var i = 0; i < count; i++) {
+                var glitcha = document.createElement('div');
+
+                // add cloned image to div wrapper
+                glitcha.className += ' glitched glitch-' + i;
+                glitcha.style = 'background-image: url(' + img.getAttribute('src') + '); ';
+
+                wrapg.appendChild(glitcha);
+            }
+        });
+
+        setInterval(function() {
+            var glitches = document.querySelectorAll('.glitched');
+            for (var i = 0; i < glitches.length; i++) {
+                glitches[i].classList.toggle('glitch-pause');
+            }
+        }, 3000);
+
+        //   if ($(window).width() < 1170) {
+        //     var wrapg = document.querySelector('.wrapg');
+        //     if (wrapg != null);
+        // }
+    </script>
+    <script type="text/javascript">
+        var wrapgb = document.querySelector('.wrapgb');
+        var imgb = document.querySelector('.glitchmeb');
+        var count = Number(img.dataset.glitchCount);
+
+        imgb.addEventListener('load', function() {
+            for (var i = 0; i < count; i++) {
+                var glitcha = document.createElement('div');
+
+                // add cloned image to div wrapper
+                glitcha.className += ' glitched glitch-' + i;
+                glitcha.style = 'background-image: url(' + imgb.getAttribute('src') + '); ';
+
+                wrapgb.appendChild(glitcha);
+            }
+        });
+
+        setInterval(function() {
+            var glitches = document.querySelectorAll('.glitched');
+            for (var i = 0; i < glitches.length; i++) {
+                glitches[i].classList.toggle('glitch-pause');
+            }
+        }, 3000);
+
+        //   if ($(window).width() < 1170) {
+        //     var wrapgb = document.querySelector('.wrapgb');
+        //     if (wrapgb != null);
+        // }
+    </script>
+    <script type="text/javascript">
+        var wrapgc = document.querySelector('.wrapgc');
+        var imgc = document.querySelector('.glitchmec');
+        var count = Number(img.dataset.glitchCount);
+
+        imgc.addEventListener('load', function() {
+            for (var i = 0; i < count; i++) {
+                var glitcha = document.createElement('div');
+
+                // add cloned image to div wrapper
+                glitcha.className += ' glitched glitch-' + i;
+                glitcha.style = 'background-image: url(' + imgc.getAttribute('src') + '); ';
+
+                wrapgc.appendChild(glitcha);
+            }
+        });
+
+        setInterval(function() {
+            var glitches = document.querySelectorAll('.glitched');
+            for (var i = 0; i < glitches.length; i++) {
+                glitches[i].classList.toggle('glitch-pause');
+            }
+        }, 3000);
+
+        //   if ($(window).width() < 1170) {
+        //     var wrapgc = document.querySelector('.wrapgc');
+        //     if (wrapgc != null);
+        // }
+    </script>
+
+    <script>
+        ! function(e, t, r) {
+            function n() {
+                for (; d[0] && "loaded" == d[0][f];) c = d.shift(), c[o] = !i.parentNode.insertBefore(c, i)
+            }
+            for (var s, a, c, d = [], i = e.scripts[0], o = "onreadystatechange", f = "readyState"; s = r.shift();) a = e.createElement(t), "async" in i ? (a.async = !1, e.head.appendChild(a)) : i[f] ? (d.push(a), a[o] = n) : e.write("<" + t + ' src="' + s + '" defer></' + t + ">"), a.src = s
+        }(document, "script", [
+            "js/jquery-3.1.1.min.js",
+            "js/inputmask.min.js",
+            "js/PageScroll2id.min.js",
+            "js/slick.min.js",
+            "js/jquery.magnific-popup.1.0.0.min.js",
+            "js/common.js"
+        ])
+    </script>
+
+</body>
+
+</html>
